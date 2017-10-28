@@ -21,6 +21,7 @@ from keras.layers import Bidirectional
 from keras.layers.normalization import BatchNormalization
 from keras.callbacks import History 
 from keras.layers import Activation
+
 frame_count = 200
 # load testing data
 path = sys.argv[1]
