@@ -1,1 +1,1 @@
-python CNN_RNN_predict.py $1 $2
+python3 CNN_RNN_predict.py $1 $2

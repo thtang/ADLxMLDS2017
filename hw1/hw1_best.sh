@@ -1,1 +1,1 @@
-python Best_predict.py $1 $2
+python3 Best_predict.py $1 $2

@@ -1,1 +1,1 @@
-python RNN_predict.py $1 $2
+python3 RNN_predict.py $1 $2
