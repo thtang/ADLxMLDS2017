@@ -1,0 +1,1 @@
+python s2vt_predict_special.py $1 $2
