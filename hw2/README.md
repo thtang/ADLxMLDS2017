@@ -10,7 +10,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 
-Usage Ex:<br>
+Usage Example:<br>
 ```
 bash hw2_special.sh MLDS_hw2_data/ special_output.txt
 ```
