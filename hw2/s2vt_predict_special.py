@@ -163,9 +163,9 @@ learning_rate = 0.0001
 
 
 
-ixtoword = pd.Series(np.load('./ixtoword.npy').tolist())
+ixtoword = pd.Series(np.load('./ixtoword_special.npy').tolist())
 
-bias_init_vector = np.load('./bias_init_vector.npy')
+bias_init_vector = np.load('./bias_init_vector_special.npy')
 model = Video_Caption_Generator(
             dim_image=dim_image,
             n_words=len(ixtoword),
