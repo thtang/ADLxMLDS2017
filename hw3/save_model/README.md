@@ -1,1 +1,1 @@
-File for storing trained model
+Folder for storing trained model
