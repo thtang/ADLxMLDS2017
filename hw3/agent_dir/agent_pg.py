@@ -75,7 +75,7 @@ class Agent_PG(Agent):
             #you can load your model here
             print('loading trained model')
             # model_file = tf.train.latest_checkpoint("./save_model_pg")
-            model_file = "./test_model/policy_network.ckpt"
+            model_file = "./policy_network.ckpt"
             self.saver.restore(self.sess, model_file)
             print("Model restored.")
 

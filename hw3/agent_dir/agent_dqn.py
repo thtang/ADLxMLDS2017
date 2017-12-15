@@ -66,7 +66,7 @@ class Agent_DQN(Agent):
             #you can load your model here
             print('testing------- loading trained model-------')
             # model_file = tf.train.latest_checkpoint("./test_model")
-            model_file = "./test_model/tf_DQN-15240000"
+            model_file = "./tf_DQN-15240000"
             self.saver.restore(self.session, model_file)
             print("Model restored.")
 
