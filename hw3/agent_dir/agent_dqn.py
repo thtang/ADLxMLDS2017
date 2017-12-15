@@ -4,9 +4,7 @@ import numpy as np
 import random
 from collections import deque
 import os
-import cv2
-from skimage.color import rgb2gray
-from skimage.transform import resize
+
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 # Hyper Parameters:
