@@ -5,8 +5,6 @@ import random
 from collections import deque
 import os
 
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
-
 # Hyper Parameters:
 FRAME_PER_ACTION = 1
 
@@ -42,9 +40,10 @@ class Agent_DQN(Agent):
         self.timeStep = 0
         self.epsilon = INITIAL_EPSILON
         self.actions = env.action_space.n
-        if args.test_dqn:
+        if args.test_pg:
             sess = tf.InteractiveSession()
             sess.close()
+            print("reset")
             tf.reset_default_graph()
         # init Q network
         self.stateInput,self.QValue,self.W_conv1,self.b_conv1,self.W_conv2,self.b_conv2,self.W_conv3,self.b_conv3,self.W_fc1,self.b_fc1,self.W_fc2,self.b_fc2 = self.createQNetwork()
@@ -62,9 +61,6 @@ class Agent_DQN(Agent):
         self.session = tf.InteractiveSession()
         self.session.run(tf.global_variables_initializer())
         checkpoint = tf.train.get_checkpoint_state("saved_networks")
-        if checkpoint and checkpoint.model_checkpoint_path:
-            self.saver.restore(self.session, checkpoint.model_checkpoint_path)
-            print("Successfully loaded:", checkpoint.model_checkpoint_path)
 
         if args.test_dqn:
             #you can load your model here

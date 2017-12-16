@@ -3,7 +3,7 @@ import scipy
 import numpy as np
 import os.path
 import tensorflow as tf
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
+
 
 
 def prepro(I):
