@@ -4,7 +4,7 @@ import numpy as np
 import os.path
 import tensorflow as tf
 
-
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 def prepro(I):
     """ prepro 210x160x3 uint8 frame into 6400 (80x80) 1D float vector """

@@ -4,7 +4,7 @@ import numpy as np
 import random
 from collections import deque
 import os
-
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 # Hyper Parameters:
 FRAME_PER_ACTION = 1
 
