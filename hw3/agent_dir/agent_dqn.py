@@ -60,7 +60,6 @@ class Agent_DQN(Agent):
         self.saver = tf.train.Saver()
         self.session = tf.InteractiveSession()
         self.session.run(tf.global_variables_initializer())
-        checkpoint = tf.train.get_checkpoint_state("saved_networks")
 
         if args.test_dqn:
             #you can load your model here
