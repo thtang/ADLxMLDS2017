@@ -32,9 +32,6 @@ class Agent_DQN(Agent):
         """
 
         super(Agent_DQN,self).__init__(env)
-
-        
-        self.createTrainingMethod()
         if args.test_pg:
             try:
                 sess = tf.InteractiveSession()
@@ -42,6 +39,7 @@ class Agent_DQN(Agent):
                 tf.reset_default_graph()
             except:
                 pass
+        
         self.env = env
         self.args = args
         # init replay memory
@@ -58,6 +56,7 @@ class Agent_DQN(Agent):
 
         self.copyTargetQNetworkOperation = [self.W_conv1T.assign(self.W_conv1),self.b_conv1T.assign(self.b_conv1),self.W_conv2T.assign(self.W_conv2),self.b_conv2T.assign(self.b_conv2),self.W_conv3T.assign(self.W_conv3),self.b_conv3T.assign(self.b_conv3),self.W_fc1T.assign(self.W_fc1),self.b_fc1T.assign(self.b_fc1),self.W_fc2T.assign(self.W_fc2),self.b_fc2T.assign(self.b_fc2)]
 
+        self.createTrainingMethod()
         
 
         # saving and loading networks
