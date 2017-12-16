@@ -34,7 +34,7 @@ class Agent_DQN(Agent):
         super(Agent_DQN,self).__init__(env)
 
         
-
+        tf.reset_default_graph()
         self.env = env
         self.args = args
         # init replay memory
