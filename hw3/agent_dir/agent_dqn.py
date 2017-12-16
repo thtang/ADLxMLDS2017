@@ -32,14 +32,8 @@ class Agent_DQN(Agent):
         """
 
         super(Agent_DQN,self).__init__(env)
-        if args.test_pg:
-            try:
-                sess = tf.InteractiveSession()
-                sess.close()
-                tf.reset_default_graph()
-            except:
-                pass
         
+
         self.env = env
         self.args = args
         # init replay memory
@@ -48,6 +42,10 @@ class Agent_DQN(Agent):
         self.timeStep = 0
         self.epsilon = INITIAL_EPSILON
         self.actions = env.action_space.n
+        if args.test_dqn:
+            sess = tf.InteractiveSession()
+            sess.close()
+            tf.reset_default_graph()
         # init Q network
         self.stateInput,self.QValue,self.W_conv1,self.b_conv1,self.W_conv2,self.b_conv2,self.W_conv3,self.b_conv3,self.W_fc1,self.b_fc1,self.W_fc2,self.b_fc2 = self.createQNetwork()
 
