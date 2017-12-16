@@ -26,8 +26,7 @@ class Agent_PG(Agent):
 
         super(Agent_PG,self).__init__(env)
 
-        
-        tf.reset_default_graph()
+
         ##################
         # YOUR CODE HERE #
         ##################
