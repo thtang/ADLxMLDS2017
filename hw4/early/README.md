@@ -1,2 +1,2 @@
 
-![Imgur Image](https://i.imgur.com/ZHVv8Gm.gifv)
+![Alt Text](https://i.imgur.com/ZHVv8Gm.gif)
