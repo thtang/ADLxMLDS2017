@@ -11,4 +11,4 @@ In my .py script, I used the following script to assign the task running on GPU 
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
-![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw4/early/anime_cDCGAN_generation_animation_.gif)
+![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw4/anime_cDCGAN_generation_animation_.gif)
