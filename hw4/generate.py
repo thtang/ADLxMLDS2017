@@ -56,7 +56,7 @@ class generator(nn.Module):
 print("load model")
 G = generator()
 G.cuda()
-G.load_state_dict(torch.load("anime_cDCGAN_results/anime_cDCGAN_generator_param_200.pkl"))
+G.load_state_dict(torch.load("anime_cDCGAN_model/anime_cDCGAN_generator_param_200.pkl"))
 
 
 print(text_path)
@@ -98,6 +98,7 @@ hair_onehot = hair_onehot.scatter_(1, torch.LongTensor(list(range(12))).view(12,
 eyes_onehot = torch.zeros(11, 11)
 eyes_onehot = eyes_onehot.scatter_(1, torch.LongTensor(list(range(11))).view(11,1), 1).view(11, 11, 1, 1)
 
+G.eval()
 
 for t_id, i in zip(testing_text_id,test_text):
     for j in range(5):
