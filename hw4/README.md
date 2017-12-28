@@ -12,7 +12,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 
-##Conditional DCGAN
+## Conditional DCGAN
 
 test text:
 ```
