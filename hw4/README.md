@@ -12,8 +12,8 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 
-<h2>Conditional DCGAN
-
+<h2>Conditional DCGAN</h2>
+<div>
 test text:
 ```
 1,blue hair blue eyes
@@ -28,3 +28,4 @@ test text:
 10,brown eyes aqua hair
 ```
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw4/anime_cDCGAN_generation_animation_.gif)
+</div>
