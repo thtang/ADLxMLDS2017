@@ -12,6 +12,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 
+<h2>Conditional DCGAN</h2>
 test text:
 ```
 1,blue hair blue eyes
