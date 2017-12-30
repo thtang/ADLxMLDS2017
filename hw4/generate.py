@@ -117,15 +117,15 @@ eyes_onehot = eyes_onehot.scatter_(1, torch.LongTensor(list(range(11))).view(11,
 G.eval()
 
 for t_id, i in zip(testing_text_id,test_text):
-    for j in range(5):
-    	with open("./fix_z/fix_z_"+str(j)+".pkl", "rb") as f:
-    		z_special = pickle.load(f)
-        hair_color, eyes_color = get_color(i)
-        print(hair_color, eyes_color)
-        y_special = torch.cat([hair_onehot[hair_encoder[hair_color]].view(1,12,1,1),
-                               eyes_onehot[eyes_encoder[eyes_color]].view(1,11,1,1)],1)
-        # z_special = torch.randn((100)).view(-1, 100, 1, 1)
-        var_z, var_y = Variable(z_special.cuda(), volatile=True), Variable(y_special.cuda(), volatile=True)
-        test_images = G(var_z, var_y)
-        image_arr = test_images[0].cpu().data.numpy().transpose(1, 2, 0)
-        scipy.misc.imsave("./samples/sample_"+t_id+"_"+str(j+1)+".jpg",image_arr)
+
+	for j in range(5):
+		with open("fix_z/fix_z_"+str(j+1)+".pkl", "rb") as f:
+			z_special = pickle.load(f)
+		hair_color, eyes_color = get_color(i)
+		print(hair_color, eyes_color)
+		y_special = torch.cat([hair_onehot[hair_encoder[hair_color]].view(1,12,1,1),
+			eyes_onehot[eyes_encoder[eyes_color]].view(1,11,1,1)], 1)
+		var_z, var_y = Variable(z_special.cuda(), volatile=True), Variable(y_special.cuda(), volatile=True)
+		test_images = G(var_z, var_y)
+		image_arr = test_images[0].cpu().data.numpy().transpose(1, 2, 0)
+		scipy.misc.imsave("./samples/sample_"+t_id+"_"+str(j+1)+".jpg",image_arr)
