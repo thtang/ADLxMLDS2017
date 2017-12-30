@@ -112,4 +112,4 @@ for t_id, i in zip(testing_text_id,test_text):
         var_z, var_y = Variable(z_special.cuda(), volatile=True), Variable(y_special.cuda(), volatile=True)
         test_images = G(var_z, var_y)
         image_arr = test_images[0].cpu().data.numpy().transpose(1, 2, 0)
-        scipy.misc.imsave("./samples/sample_"+t_id+"_"+str(j)+".jpg",image_arr)
+        scipy.misc.imsave("./samples/sample_"+t_id+"_"+str(j+1)+".jpg",image_arr)
