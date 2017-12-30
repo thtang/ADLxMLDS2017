@@ -75,7 +75,6 @@ with open(text_path, "r") as f:
 # load best color match dict
 def dd():
     return defaultdict(int)
-
 with open("hair_color_match.plk","rb") as f:
     hair_color_match = pickle.load(f)
 with open("eyes_color_match.plk","rb") as f:
@@ -107,7 +106,7 @@ with open("hair_encoder.pkl","rb") as f:
     hair_encoder = pickle.load(f)
 with open("eyes_encoder.pkl","rb") as f:
     eyes_encoder = pickle.load(f)
-    
+
 # label preprocess (onehot embedding matrix)
 hair_onehot = torch.zeros(12, 12)
 hair_onehot = hair_onehot.scatter_(1, torch.LongTensor(list(range(12))).view(12,1), 1).view(12, 12, 1, 1)
@@ -119,11 +118,13 @@ G.eval()
 
 for t_id, i in zip(testing_text_id,test_text):
     for j in range(5):
+    	with open("./fix_z/fix_z_"+str(j)+".pkl", "rb") as f:
+    		z_special = pickle.load(f)
         hair_color, eyes_color = get_color(i)
         print(hair_color, eyes_color)
         y_special = torch.cat([hair_onehot[hair_encoder[hair_color]].view(1,12,1,1),
                                eyes_onehot[eyes_encoder[eyes_color]].view(1,11,1,1)],1)
-        z_special = torch.randn((100)).view(-1, 100, 1, 1)
+        # z_special = torch.randn((100)).view(-1, 100, 1, 1)
         var_z, var_y = Variable(z_special.cuda(), volatile=True), Variable(y_special.cuda(), volatile=True)
         test_images = G(var_z, var_y)
         image_arr = test_images[0].cpu().data.numpy().transpose(1, 2, 0)
