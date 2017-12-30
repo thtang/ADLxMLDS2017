@@ -15,6 +15,8 @@ import sys
 text_path = sys.argv[1]
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
+os.mkdir('./samples')
+
 class generator(nn.Module):
     # initializers
     def __init__(self, d=64):
@@ -56,7 +58,7 @@ class generator(nn.Module):
 print("load model")
 G = generator()
 G.cuda()
-G.load_state_dict(torch.load("anime_cDCGAN_model/anime_cDCGAN_generator_param_200.pkl"))
+G.load_state_dict(torch.load("anime_cDCGAN_model/anime_cDCGAN_generator_param_100.pkl"))
 
 
 print(text_path)
@@ -110,4 +112,4 @@ for t_id, i in zip(testing_text_id,test_text):
         var_z, var_y = Variable(z_special.cuda(), volatile=True), Variable(y_special.cuda(), volatile=True)
         test_images = G(var_z, var_y)
         image_arr = test_images[0].cpu().data.numpy().transpose(1, 2, 0)
-        scipy.misc.imsave("samples/sample_"+t_id+"_"+str(j)+".jpg",image_arr)
+        scipy.misc.imsave("./samples/sample_"+t_id+"_"+str(j)+".jpg",image_arr)
