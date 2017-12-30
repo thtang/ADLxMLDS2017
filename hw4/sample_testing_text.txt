@@ -12,4 +12,5 @@
 12,gray hair
 13,yellow eyes
 14,gray hair orange eyes
-15,green eyes brow hair
+15,green eyes brown hair
+16,orange hair
