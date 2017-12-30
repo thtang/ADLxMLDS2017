@@ -11,6 +11,9 @@ from torchvision import datasets, transforms
 from torch.autograd import Variable
 import numpy as np
 import sys
+import pickle
+from collections import defaultdict
+
 
 text_path = sys.argv[1]
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
@@ -59,7 +62,7 @@ print("load model")
 G = generator()
 G.cuda()
 G.load_state_dict(torch.load("anime_cDCGAN_model/anime_cDCGAN_generator_param_100.pkl"))
-
+print("model loaded")
 
 print(text_path)
 # read test text for texting 
@@ -69,6 +72,15 @@ with open(text_path, "r") as f:
     testing_text_id = [line.strip().split(",")[0] for line in content]
     test_text = [line.strip().split(",")[1] for line in content]
     
+# load best color match dict
+def dd():
+    return defaultdict(int)
+
+with open("hair_color_match.plk","rb") as f:
+    hair_color_match = pickle.load(f)
+with open("eyes_color_match.plk","rb") as f:
+    eyes_color_match = pickle.load(f)
+
 def get_color(text):
     print(text)
     e = False
@@ -81,10 +93,12 @@ def get_color(text):
         if t == "eyes":
             eyes_color = text[i-1] + " eyes"
             e = True
-    if h == False:
-        hair_color = "blonde hair"
+    if h == False: # no condition for hair
+        sub_dict = eyes_color_match[eyes_color]
+        hair_color = sorted(sub_dict, key=sub_dict.get,reverse=True)[0]
     if e == False:
-        eyes_color = "blue eyes"
+        sub_dict = hair_color_match[hair_color]
+        eyes_color = sorted(sub_dict, key=sub_dict.get,reverse=True)[0]
     return hair_color, eyes_color
 
 
@@ -93,6 +107,7 @@ with open("hair_encoder.pkl","rb") as f:
     hair_encoder = pickle.load(f)
 with open("eyes_encoder.pkl","rb") as f:
     eyes_encoder = pickle.load(f)
+    
 # label preprocess (onehot embedding matrix)
 hair_onehot = torch.zeros(12, 12)
 hair_onehot = hair_onehot.scatter_(1, torch.LongTensor(list(range(12))).view(12,1), 1).view(12, 12, 1, 1)
