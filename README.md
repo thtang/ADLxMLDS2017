@@ -1,11 +1,9 @@
 # ADLxMLDS2017
 
-###Description:
-
+### Description:
 Learning the basic theory of deep learning and how to apply to various applications
 
-###Expectations and Goals:
-
+### Expectations and Goals:
 The students are expected to understand
 1) how deep learning works
 2) how to frame tasks into deep learning problems
