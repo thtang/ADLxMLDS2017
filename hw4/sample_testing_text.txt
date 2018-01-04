@@ -1,16 +1,3 @@
-1,blue hair blue eyes
-2,blue hair green eyes
-3,blue hair red eyes
-4,green hair blue eyes
-5,red hair
-6,red hair green eyes
-7,black eyes
-8,aqua eyes purple hair
-9,white hair pink eyes
-10,brown eyes aqua hair
-11,orange eyes
-12,gray hair
-13,yellow eyes
-14,gray hair orange eyes
-15,green eyes brown hair
-16,orange hair
+1,blue hair red eyes
+2,black hair blue eyes
+3,red hair green eyes
