@@ -1,5 +1,4 @@
 import os
-import itertools
 import pickle
 import skimage.io
 import scipy.misc 
