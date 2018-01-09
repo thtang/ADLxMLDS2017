@@ -21,7 +21,7 @@ bash hw2_seq2seq.sh MLDS_hw2_data/ testset_output.txt peerreview_output.txt
 ```
 
 ### Result:
-Input a video:
+Input a video:<br>
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw2/video_2.gif)
 
 output text:
