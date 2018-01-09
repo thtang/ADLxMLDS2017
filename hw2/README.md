@@ -20,11 +20,11 @@ for complete submission:<br>
 bash hw2_seq2seq.sh MLDS_hw2_data/ testset_output.txt peerreview_output.txt
 ```
 
-```
-------- input video -------
-```
+### Result:
+Input a video:
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw2/video_2.gif)
 
+output text:
 ```
-output text: a group of men are dancing. 
+a group of men are dancing. 
 ```
