@@ -1,4 +1,6 @@
 # Sequence Labeling
+### Techniques:
+`CNN` &nbsp; `RNN`  &nbsp;`LSTM` &nbsp;`Bi-LSTM` &nbsp;
 ### Package : 
 `Keras` &nbsp; ` Numpy`  &nbsp;` pandas` &nbsp;
 
