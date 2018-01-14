@@ -18,6 +18,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ### model description:
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw4/ADL_hw4.png)
 * image modified from [Generative Adversarial Text-to-Image Synthesis](http://arxiv.org/abs/1605.05396)
+
 test text:
 ```
 1,blue hair blue eyes
