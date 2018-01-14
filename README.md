@@ -1,5 +1,5 @@
 # ADLxMLDS2017
-
+**Applied Deep Learning / Machine Learning and Having It Deep and Structured**
 ### Description:
 Learning the basic theory of deep learning and how to apply to various applications
 
