@@ -17,7 +17,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ## Conditional DCGAN
 ### model description:
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw4/ADL_hw4.png)
-* image modified from [Generative Adversarial Text-to-Image Synthesis][2]
+* image modified from [Generative Adversarial Text-to-Image Synthesis](http://arxiv.org/abs/1605.05396)
 test text:
 ```
 1,blue hair blue eyes
@@ -32,4 +32,3 @@ test text:
 10,brown eyes aqua hair
 ```
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw4/anime_cDCGAN_generation_animation_.gif)
-[2]:http://arxiv.org/abs/1605.05396
