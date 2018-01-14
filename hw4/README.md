@@ -1,4 +1,6 @@
-
+# Comics Generation
+### Techniques:
+`Generative adversarial network` &nbsp; `conditional GAN` &nbsp;
 ### Package : 
 `Pytorch` &nbsp; `Keras` &nbsp;` Numpy`  &nbsp;` pandas` &nbsp;
 
