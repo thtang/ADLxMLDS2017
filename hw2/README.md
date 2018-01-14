@@ -29,6 +29,7 @@ Input a video:<br>
 
 ![Alt Text](https://github.com/thtang/ADLxMLDS2017/blob/master/hw2/video_2.gif)
 * Video from peer review folder
+
 Output text:
 ```
 a group of men are dancing. 
