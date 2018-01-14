@@ -3,9 +3,8 @@
 ### Description:
 Learning the basic theory of deep learning and how to apply to various applications
 
-### Expectations and Goals:
-The students are expected to understand
-1) how deep learning works
-2) how to frame tasks into deep learning problems
-3) how to use deep learning toolkits to implement the designed models, and
-4) when and why specific deep learning techniques work for specific problems.
+### Repo content:
+1) hw1: Sequence labeling. Use RNN to improve phone recognition.
+2) hw2: Vedio caption. Given a video(mfcc adn fbank features here) and generate texts to describe the video.
+3) hw3: Game playing. Use Deep reinforce learning algo to play Atari games.
+4) hw4: Comic generation. Implement conditional Deep convolution GAN to generate anime faces given hair and eyes color.
