@@ -1,4 +1,6 @@
 # Video Captioning
+### Techniques:
+`Seq2seq` &nbsp; ` s2vt`  &nbsp;`LSTM` &nbsp;
 ### Package : 
 `Tensorflow` &nbsp; ` Numpy`  &nbsp;` pandas` &nbsp;
 
