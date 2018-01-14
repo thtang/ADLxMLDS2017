@@ -1,4 +1,6 @@
 # Game Playing
+### Techniques:
+`Deep reinforce learning` &nbsp; `DQN` &nbsp;`Polocy network`  &nbsp;` DDQN` &nbsp;
 ### Package : 
 `Tensorflow` &nbsp; `Keras` &nbsp;` Numpy`  &nbsp;` pandas` &nbsp;
 
