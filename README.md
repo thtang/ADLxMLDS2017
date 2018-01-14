@@ -4,7 +4,7 @@
 Learning the basic theory of deep learning and how to apply to various applications
 
 ### Repo content:
-1) hw1: Sequence labeling. Use RNN to improve phone recognition.
-2) hw2: Vedio caption. Given a video(mfcc adn fbank features here) and generate texts to describe the video.
-3) hw3: Game playing. Use Deep reinforce learning algo to play Atari games.
-4) hw4: Comic generation. Implement conditional Deep convolution GAN to generate anime faces given hair and eyes color.
+* hw1: Sequence labeling. Use RNN to improve phone recognition.
+* hw2: Vedio caption. Given a video(mfcc adn fbank features here) and generate texts to describe the video.
+* hw3: Game playing. Use Deep reinforce learning algo to play Atari games.
+* hw4: Comic generation. Implement conditional Deep convolution GAN to generate anime faces given hair and eyes color.
